@@ -1,0 +1,562 @@
+    1  git config
+    2  git config --help
+    3  git config --get-all
+    4  git login
+    5  ll
+    6  cd .git/
+    7  ll
+    8  cat config 
+    9  nano config 
+   10  cat config 
+   11  cd ..
+   12  ll
+   13  sh update.sh 
+   14  git init
+   15  cd .git/
+   16  ll
+   17  cat config 
+   18  cd ..
+   19  sh update.sh 
+   20  git status 
+   21  git add .
+   22  git status 
+   23  sh update.sh 
+   24  pwd
+   25  ls -l -a
+   26  gcloud config list
+   27  gsutil ls
+   28  gcloud config configurations list
+   29  gcloud config list
+   30  gsutil ls
+   31  gsutil ls gs://ant-bucket-for-labs/
+   32  gsutil mb --help
+   33  gsutil mb -l US-EAST4 gs://ant-bucket-for-labs-two
+   34  gsutil ls
+   35  gsutil label get gs://ant-bucket-for-labs/
+   36  gsutil label get gs://ant-bucket-for-labs/ > bucketlabels.json
+   37  cat bucketlabels.json 
+   38  gsutil label set bucketlabels.json gs://ant-bucket-for-labs-two
+   39  gsutil label ch -l "environment:dev" gs://ant-bucket-for-labs-two/ 
+   40  gsutil label get gs://ant-bucket-for-labs-two/ 
+   41  gsutil versioning  get gs://ant-bucket-for-labs*
+   42  gsutil versioning  set on  gs://ant-bucket-for-labs*
+   43  gsutil versioning  get gs://ant-bucket-for-labs*
+   44  gsutil ls gs://ant-bucket-for-labs
+   45  ls
+   46  cd ANT_train_1/
+   47  ll
+   48  gsutil cp gs://ant-bucket-for-labs/hystory.txt .
+   49  ll
+   50  gsutil cp  hystory.txt gs://ant-bucket-for-labs-two/ 
+   51  gsutil ls gs://ant-bucket-for-labs-two/ 
+   52  gsutil ls -a gs://ant-bucket-for-labs-two/ 
+   53  history 
+   54  history >> history_gcp.txt
+   55  cat hystory.txt 
+   56  cat hi
+   57  cat history_gcp.txt 
+   58  gsutil ls gs://ant-bucket-for-labs*
+   59  gsutil cp gs://ant-bucket-for-labs/AntonPushkarev_DevOPS_May.pdf gs://ant-bucket-for-labs-two/ 
+   60  gsutil ls gs://ant-bucket-for-labs*
+   61  gsutil acl ch -u AllUsers:R gs://ant-bucket-for-labs-two/AntonPushkarev_DevOPS_May.pdf 
+   62  gcloud config get-value project
+   63  gcloud projects list
+   64  gcloud config  set project antrain-dev
+   65  gcloud config get-value project
+   66  gcloud compute instance list
+   67  gcloud compute instances list
+   68  gcloud services list 
+   69  gcloud services list 
+   70  gcloud config get project
+   71  gcloud projects list 
+   72  gcloud config set project antrain-dev
+   73  gcloud services list
+   74  gcloud services list | grep compute
+   75  gcloud services list --hepl
+   76  gcloud services--hepl
+   77  gcloud services --hepl
+   78  gcloud services enable
+   79  gcloud services list enable
+   80  gcloud services list
+   81  gcloud instances list
+   82  gcloud compute instances list
+   83  gcloud compute instances list
+   84  gcloud compute create ant-dev-webserver
+   85  gcloud compute instances create ant-dev-webserver
+   86  gcloud compute del ant-dev-webserver
+   87  gcloud compute instances delete ant-dev-webserver
+   88  gcloud config configurations list
+   89  gcloud config list
+   90  whoami
+   91  hostname
+   92  curl api.ipfy.org
+   93  curl api.ipify.org
+   94  gcloud compute machine-types list
+   95  gcloud compute machine-types list | grep micro
+   96  gcloud config list
+   97  gcloud config get zone
+   98  gcloud config get-value 
+   99  gcloud config get-value --zone
+  100  gcloud config get-value --help
+  101  gcloud config get-value copmute/zone
+  102  gcloud config get-value compute/zone
+  103  gcloud config get-value compute/region 
+  104  gcloud config set compute/zone us-east1-b
+  105  gcloud config set compute/region  us-east1
+  106  gcloud config get-value compute/region 
+  107  gcloud config set compute/zone us-east1-b
+  108  gcloud config get-value compute/zone
+  109  gcloud compute instances create --machine-type=f1-micro ant-dev-webserver
+  110  gcloud compute instances list
+  111  ping -c 3 34.75.32.136
+  112  gcloud compute ssh ant-dev-webserver
+  113  ll
+  114  cd .ssh/
+  115  ll
+  116  curl metadata.google.internal/computeMetadata/v1/
+  117  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project/attributes/ssh-keys
+  118  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project/attributes/
+  119  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project/
+  120  curl  metadata.google.internal/computeMetadata/v1/project/attributes/
+  121  curl metadata.google.internal/computeMetadata/v1/project/attributes/
+  122  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/
+  123  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance
+  124  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/cpu-platform
+  125  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/id
+  126  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/mane
+  127  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/name
+  128  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance
+  129  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/attributes
+  130  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/
+  131  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project
+  132  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project/attributes/ssh-keys
+  133  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project/attributes
+  134  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project
+  135  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/attributes
+  136  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/
+  137  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project/attributes
+  138  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project/attributes/
+  139  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project
+  140  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/project/project-id
+  141  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/name
+  142  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/
+  143  curl -H "Metadata-Flavor: Google" metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/email
+  144  gcloud compute instances list
+  145  gcloud compute instances delete ant-dev-webserver 
+  146  gcloud compute instances list
+  147  gcloud compute instance --help
+  148  gcloud compute instances --help
+  149  gcloud compute instances start ant-manage-server --zone=us-central1-a 
+  150  gcloud compute instances stop  ant-manage-server --zone=us-central1-a 
+  151  gcloud compute instances start ant-manage-server --zone=us-central1-a 
+  152  history 
+  153  history | grep alias
+  154  gcloud compute ssh ant-manage-server --zone=us-central1-a 
+  155  python --version
+  156  cd /usr/bin/
+  157  ll
+  158  nano
+  159  sudo nano ~/.bashrc 
+  160  cat ~/.bashrc 
+  161  gcloud compute ssh ant-manage-server --zone=us-central1-a 
+  162  gcloud compute instances start ant-manage-server --zone=us-central1-a 
+  163  gcloud compute ssh ant-manage-server --zone=us-central1-a 
+  164  gcloud compute instances stop ant-manage-server --zone=us-central1-a 
+  165  gcloud compute ssh ant-manage-server --zone=us-central1-a 
+  166  ll
+  167  mkdir Hello World
+  168  ll
+  169  mkdir Hello_World
+  170  ll
+  171  mkdir Hell\ World
+  172  ll
+  173  rm World/
+  174  rm -rf World/
+  175  rm -rf Hell
+  176  rm -rf Hello
+  177  rm -rf Hello_World/
+  178  ll
+  179  rm -rf Hell\ World/
+  180  ll
+  181  gcloud compute instances list
+  182  gcloud compute instances stop ant-prod-websever --zone=us-east4-a 
+  183  gcloud create progect ATNTRain LOGS
+  184  gcloud compute create progect ATNTRain LOGS
+  185  gcloud projects create antrain-logs
+  186  gcloud projects list
+  187  gcloud config 
+  188  gcloud config list
+  189  gcloud config get-value project 
+  190  gcloud compute instances delete ant-logs-server --zone=northamerica-northeast1-a 
+  191  ll
+  192  cd ANT_train_1/
+  193  ll
+  194  ansible --vesion
+  195  free
+  196  df
+  197  top
+  198  ps
+  199  ps -a
+  200  ll
+  201  cd  ~
+  202  ll
+  203  mv install.sh ~/ANT_train_1/
+  204  mv Udemy_Lab_One_v2.0.txt ~/ANT_train_1/
+  205  cd ANT_train_1/
+  206  ll
+  207  gcloud projects delete antrain-logs 
+  208  gcloud projects create antrain-logs --enable-cloud-apis --name="ANTRain LOGS" --labels=[environment=operation, owner=tonypush, purpose=education, function=maintenance]
+  209  gcloud projects create antrain-logs --enable-cloud-apis --name="ANTRain LOGS" --labels=[environment=operation,owner=tonypush,purpose=education,function=maintenance]
+  210  gcloud projects create antrain-logs --enable-cloud-apis --name="ANTRain LOGS" --labels=[environment = operation, owner = tonypush, purpose = education, function = maintenance]
+  211  gcloud projects create antrain-logs --enable-cloud-apis --name="ANTRain LOGS" --labels=environment=operation,owner=tonypush,purpose=education,function=maintenance 
+  212  gcloud projects list
+  213  gcloud projects create antrain-logs --enable-cloud-apis --name="ANTRain LOGS" --labels=environment=operation,owner=tonypush,purpose=education,function=maintenance 
+  214  gcloud projects create antrain-logs-v2 --enable-cloud-apis --name="ANTRain LOGS" --labels=environment=operation,owner=tonypush,purpose=education,function=maintenance
+  215  gcloud projects describe antrain-logs 
+  216  gcloud projects list
+  217  gcloud projects describe antrain-logs-v2
+  218  nano ~/ANT_train_1/Udemy_Lab_One_v2.0.txt 
+  219  gcloud config set project antrain-logs_v2
+  220  gcloud config set project antrain-logs-v2
+  221  gcloud services enable cloudbilling.googleapis.com
+  222  gcloud services enable billingbudgets.googleapis.com
+  223  gcloud alpha billing accounts projects link antrain-logs --billing-account=01424C-53C26D-1E853F
+  224  gcloud alpha billing accounts projects link antrain-logs-v2 --billing-account=01424C-53C26D-1E853F
+  225  gcloud bete billing accounts projects link antrain-logs-v2 --billing-account=01424C-53C26D-1E853F
+  226  gcloud beta billing accounts projects link antrain-logs-v2 --billing-account=01424C-53C26D-1E853F
+  227  gcloud beta billing accounts projects link antrain-logs-v2 --billing-account=01424-53C26D-1E853F
+  228  gcloud beta billing accounts projects link antrain-logs-v2 --billing-account=01424-5326D-1E853F
+  229  gcloud alpha billing accounts projects link antrain-logs-v2 --billing-account=01424C-53C26D-1E853F
+  230  gcloud alpha billing projects link antrain-logs-v2  --billing-account=01424C-53C26D-1E853F
+  231  gcloud services enable compute.googleapis.com
+  232  gcloud config set project antrain-logs-v2
+  233  gcloud alpha billing projects link antrain-logs-v2  --billing-account=01424C-53C26D-1E853F
+  234  gcloud config set project antrain-prod
+  235  gcloud services enable compute.googleapis.com
+  236  gsutil mb -p antrain-prod -c STANDARD -l us-east4 -b on gs://antrain-prod-bucket-for-logs/
+  237  ll
+  238  cd ANT_train_1/
+  239  ll
+  240  nano install.sh 
+  241  vim install.sh 
+  242  gcloud compute instances create ant-prod-logsercer --machine-type e2-micro --subnet=default --network-tier=PREMIUM --metadata-from-file startup-script=install.sh --metadata lab-logs-bucket=gs://antrain-logs-bucket-for-logs/ --scopes=storage-rw,monitoring-write,logging-write
+  243  gcloud compute instances create ant-prod-logserver --machine-type e2-micro --subnet=default --network-tier=PREMIUM --metadata-from-file startup-script=install.sh --metadata lab-logs-bucket=gs://antrain-prod-bucket-for-logs/ --scopes=storage-rw,monitoring-write,logging-write
+  244  ll
+  245  cd ANT_train_1/
+  246  ll
+  247  cd ~
+  248  ll
+  249  mv script_install.txt ~/ANT_train_1/
+  250  gcloud config set project antrain-prod
+  251  gcloud services enable cloudbilling.googleapis.com
+  252  gcloud services enable billingbudgets.googleapis.com
+  253  gcloud services enable compute.googleapis.com
+  254  gsutil mb -p antrain-prod -c STANDARD -l us-east4 -b on gs://antrain-prod-bucketforlogs/
+  255  ll
+  256  cd ANT_train_1/
+  257  ll
+  258  nano script_install.txt 
+  259  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  260  ll
+  261  cd ANT_train_1/
+  262  ll
+  263  gcloud compute instances delete ant-prod-logserver-v2 --zone=us-east4-c
+  264  nano script_install.txt 
+  265  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=~/ANT_train_1/script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  266  pwd
+  267  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=~/ANT_train_1/script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-cgcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=~/ANT_train_1/script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  268  pwd
+  269  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=~/ANT_train_1/script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  270  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=~/ANT_train_1/script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw \
+  271  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script= ~/ANT_train_1/script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  272  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script= "~/ANT_train_1/script_install.txt"         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  273  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  274  gcloud compute ssh ant-prod-logserver-v2 --zone=us-east4-c 
+  275  ll
+  276  rm script_install.txt 
+  277  curl -sSO https://dl.google.com/cloudagents/install-logging-agent.sh
+  278  ll
+  279  gcloud compute instances delete ant-prod-logserver-v2 --zone=us-east4-c 
+  280  sh install-logging-agent.sh 
+  281  cd ..
+  282  ll
+  283  ls 
+  284  ls -la
+  285  sudo nano .bashrc 
+  286  ll
+  287  sh
+  288  bash
+  289  ll
+  290  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=script_install.txt         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  291  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=script_install.sh         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  292  gcloud compute ssh ant-prod-lo
+  293  gcloud compute ssh ant-prod-logserver-v2 --zone=us-east4-c 
+  294  ll
+  295  rm script_install.sh 
+  296  gcloud compute instances delete ant-prod-logserver-v2 --zone=us-east4-c 
+  297  ll
+  298  gcloud compute instances create ant-prod-logserver-v2         --metadata-from-file=startup-script=script_install_v2.sh         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro         --scopes=gke-default,storage-rw         --zone=us-east4-c
+  299  ll
+  300  cd ANT_train_1/
+  301  ll
+  302  rm install*
+  303  cd ..
+  304  ll
+  305  mv Udemy_Lab_One_v3.0.txt ~/ANT_train_1/
+  306  mv script_install_v2.sh ~/ANT_train_1/
+  307  ll
+  308  curl "http://metadata.google.internal/computeMetadata/v1/instance/tags?wait_for_change=true" -H "Metadata-Flavor: Google"
+  309  gcloud beta compute ssh ant-prod-instance-template-one-1 --project=antrain-prod --zone=us-east4-a --command="curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh && sudo bash add-monitoring-agent-repo.sh --also-install && sudo service stackdriver-agent start"
+  310  gcloud beta compute ssh ant-prod-instance-template-one-2 --project=antrain-prod --zone=us-east4-a --command="curl -sSO https://dl.google.com/cloudagents/add-monitoring-agent-repo.sh && sudo bash add-monitoring-agent-repo.sh --also-install && sudo service stackdriver-agent start"
+  311  gcloud compute ssh ant-prod-instance-template-one-1
+  312  gcloud compute ssh ant-prod-instance-template-one-2
+  313  gcloud compute ssh ant-prod-instance-template-one-1
+  314  gcloud compute ssh ant-prod-instance-template-one-2
+  315  exit
+  316  pwd
+  317  ll
+  318  gcloud config set project antrain-prod
+  319  ll
+  320  gcloud compute instance-templates create ant-prod-instance-tempale-cli         --metadata-from-file=startup-script=script_install_v3.sh         --metadata=lab-logs-bucket=gs://antrain-prod-bucketforlogs         --machine-type=e2-micro --labels=environment=production,owner=tonypush,purpose=education,function=perfomance         --scopes=gke-default,storage-rw --network=default         --region=us-east1
+  321  gcloud compute instances create ant-prod-instance-from-template --source-instance-template=ant-prod-instance-tempale-cli  
+  322  gcloud get-iam-polisy
+  323  gcloud iam get-iam-polisy
+  324  gcloud iam 
+  325  gcloud iam --help
+  326  gcloud iam list-grantable-roles
+  327  gcloud iam list-grantable-roles --help
+  328  gcloud iam list-grantable-roles -list
+  329  gcloud iam list-grantable-roles - list
+  330  gcloud projects get-iam-policy antrain-prod --format json > ~/policy.json
+  331  ll
+  332  history
+  333  gcloud config set project antrain-dev
+  334  gcloud services enable cloudbilling.googleapis.com
+  335  gcloud services enable billingbudgets.googleapis.com
+  336  gcloud services enable compute.googleapis.com
+  337  gcloud services enable api.googleapis.com
+  338  gcloud services list --available
+  339  gcloud services list --available | grep ip
+  340  gcloud services list --available | grep api
+  341  gcloud iam service-accounts create jenkins --display-name jenkins
+  342  export SA_EMAIL=$(gcloud iam service-accounts list \
+  343      --filter="displayName:jenkins" --format='value(email)')
+  344  export PROJECT=$(gcloud info --format='value(config.project)')
+  345  echo $PROJECT
+  346  echo $SA_EMAIL
+  347  gcloud projects add-iam-policy-binding $PROJECT     --role roles/storage.admin --member serviceAccount:$SA_EMAIL
+  348  gcloud projects add-iam-policy-binding $PROJECT --role roles/compute.instanceAdmin.v1     --member serviceAccount:$SA_EMAIL
+  349  gcloud projects add-iam-policy-binding $PROJECT --role roles/compute.networkAdmin     --member serviceAccount:$SA_EMAIL
+  350  gcloud projects add-iam-policy-binding $PROJECT --role roles/compute.securityAdmin     --member serviceAccount:$SA_EMAIL
+  351  gcloud projects add-iam-policy-binding $PROJECT --role roles/iam.serviceAccountActor     --member serviceAccount:$SA_EMAIL
+  352  gcloud iam service-accounts keys create jenkins-sa.json --iam-account $SA_EMAIL
+  353  ls ~/.ssh/id_rsa.pub || ssh-keygen -N ""
+  354  ls ~/.ssh/id_rsa.pub 
+  355  cd ~/.ssh/
+  356  ls
+  357  ls -la
+  358   gcloud container clusters get-credentials cluster-1 --zone us-east4-c --project antrain-dev \
+  359  cd /var/
+  360  ls -la
+  361   gcloud container clusters get-credentials cluster-1 --zone us-east4-c --project antrain-dev  && kubectl get application ant-jenkins-insatnce -o yaml
+  362  gcloud container clusters get-credentials ant-dev-cluster-1 --zone us-east4-c --project antrain-dev
+  363  kubectl get nodes
+  364  ll
+  365  cd ANT_train_1/
+  366  ll
+  367  cd ..
+  368  mkdir ANT_train_2
+  369  cd ANT_train_2
+  370  ll
+  371  git init
+  372  ll
+  373  cd ~/
+  374  ll
+  375  cd .ssh/
+  376  ll
+  377  ssh-keygen 
+  378  ll
+  379  sudo cat key-for-git-to-gcc.pub 
+  380  cd ~/ANT_train_2
+  381  ll
+  382  git remote -v
+  383  git init
+  384  git clone git@github.com:Bobos77/K8S-Udemy.git
+  385  ll
+  386  git status 
+  387  git add .
+  388  git checkout -b dev origin/dev
+  389  git checkout -b dev
+  390  git checkout -b dev origin/dev
+  391  git branch
+  392  git branches
+  393  git branch
+  394  git checkout -b master
+  395  git branch
+  396  git branch -list
+  397  git branch --list
+  398  git checkout dev
+  399  git status 
+  400  git checkout - b dev
+  401  git checkout -b dev
+  402  git status 
+  403  git commit -m "First commit"
+  404  git config --global user.email app1977h@gmail.com
+  405  git config --global user.name Bobos77
+  406  git commit -m "First commit"
+  407  git push origin dev
+  408  git push origin master
+  409  git push
+  410  git push origin
+  411  git push origin dev
+  412  git git@github.com:Bobos77/K8S-Udemy.git
+  413  git clone git@github.com:Bobos77/K8S-Udemy.git
+  414  cd ~/.ssh/
+  415  ll
+  416  chmod 400 key-for-git-to-gcc*
+  417  ll
+  418  git clone git@github.com:Bobos77/K8S-Udemy.git
+  419  cd ~/ANT_train_2
+  420  ll
+  421  git init
+  422  git clone git@github.com:Bobos77/K8S-Udemy.git
+  423  echo "# K8S-Udemy" >> README.md
+  424  git init
+  425  git add README.md
+  426  git commit -m "first commit"
+  427  git branch -M master
+  428  git remote add origin git@github.com:Bobos77/K8S-Udemy.git
+  429  git push -u origin master
+  430  git status 
+  431  ll
+  432  git clone https://github.com/Bobos77/K8S-Udemy.git
+  433  git status 
+  434  git push origin master
+  435  cd ~/.ssh/
+  436  ll
+  437  cat key-for-git-to-gcc.pub 
+  438  cd ~/ANT_train_2
+  439  ll
+  440  rm -rg .git/
+  441  rm -rf .git/
+  442  ll
+  443  rm -rf K8S-Udemy/
+  444  rm -rf README.md 
+  445  ll
+  446  git init 
+  447  git clone git@github.com:Bobos77/K8S-Continue.git
+  448  git congif
+  449  git congif --global
+  450  git config --global
+  451  git config --global --get-all
+  452  git config --get-all
+  453  git config --list
+  454  ll
+  455  cd .git/
+  456  ll
+  457  cd ..
+  458  ll
+  459  echo "# K8S-Continue" >> README.md
+  460  git init
+  461  git add README.md
+  462  git commit -m "first commit"
+  463  git branch -M master
+  464  git remote add origin git@github.com:Bobos77/K8S-Continue.git
+  465  git push -u origin master
+  466  git remote add origin https://github.com/Bobos77/K8S-Continue.git
+  467  git remote -v 
+  468  cd ~/.ssh/
+  469  ll
+  470  rm -rm key-for-git-to-gcc*
+  471  sudo rm -rf key-for-git-to-gcc*
+  472  ll
+  473  cat id_rsa.pub 
+  474  cd ~/ANT_train_2
+  475  ll
+  476  git push origin master 
+  477  git sta
+  478  git status 
+  479  git add .
+  480  date
+  481  time
+  482  utime
+  483  date +%c
+  484  echo "HEllo"
+  485  echo "Commit from $date"
+  486  echo "Commit from" $date
+  487  echo "Commit from" $(date)
+  488  echo "Commit from" $(date)"
+  489  s
+  490  echo "Commit from" $(date +%c)
+  491  git commit -m "echo "Commit from" $(date)"
+  492  git commit -m echo "Commit from" $(date)
+  493  git commit -m "First commit"
+  494  git push origin master 
+  495  kubectl get nodes
+  496  kubectl get pods
+  497  kubectl get pod
+  498  kubectl get clusters
+  499  kubectl get --help
+  500  kubectl get pods
+  501  cd ANT_train_2
+  502  ll
+  503  git status 
+  504  git add .
+  505  git commit -m "Second commit for Network Lesson"
+  506  git push origin master 
+  507  git status 
+  508  git add .
+  509  git status 
+  510  git commit "apiVersion: v1
+kind: Service
+metadata:
+  name: hello-svc
+  labels:
+    app: hello-world
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 30001
+    protocol: TCP
+  selector:
+    app: hello-world
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deploy
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: hello-world
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-pod
+        image: nigelpoulton/acg-web:0.1
+        ports:
+  511  git commit -m "Second commit"
+  512  git push origin master 
+  513  git branch 
+  514  git init 
+  515  git status 
+  516  ll
+  517  git push origin master 
+  518  git remote add origin git@github.com:Bobos77/K8S-Continue.git
+  519  git pull origin master 
+  520  git push origin master 
+  521  ll
+  522  kubectl apply -f ./ping-deploy.yml 
+  523  kubectl get deploy
+  524  history >> history.txt
